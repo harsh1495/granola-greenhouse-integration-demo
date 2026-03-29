@@ -1,0 +1,171 @@
+/* Greenhouse Dashboard — "My Dashboard" with interviews */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 32px 80px;
+}
+
+.heading {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--gh-text);
+  margin-bottom: 28px;
+}
+
+/* My Interviews card */
+.interviewsCard {
+  background: var(--gh-card-bg);
+  border: 1px solid var(--gh-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.interviewsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.interviewsTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--gh-text);
+}
+
+.pastLink {
+  font-size: 13px;
+  color: var(--gh-accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+}
+
+/* Interview row */
+.interviewRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--gh-border);
+}
+
+.interviewRow:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.candidateAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gh-bg-secondary);
+  border: 1px solid var(--gh-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gh-text-secondary);
+  flex-shrink: 0;
+}
+
+.interviewInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.interviewDate {
+  font-size: 13px;
+  color: var(--gh-text-secondary);
+  margin-bottom: 2px;
+}
+
+.interviewStage {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gh-text);
+}
+
+.interviewJob {
+  font-size: 13px;
+  color: var(--gh-text-secondary);
+}
+
+.interviewCandidate {
+  font-size: 13px;
+  color: var(--gh-text-tertiary);
+  margin-top: 1px;
+}
+
+.interviewKitButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gh-text);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.interviewKitButton:hover {
+  background: var(--gh-hover);
+  border-color: var(--gh-scorecard-border);
+}
+
+/* Scorecard status badge */
+.scorecardBadge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.scorecardPending {
+  composes: scorecardBadge;
+  background: var(--gh-warning-bg);
+  color: #8a7520;
+}
+
+.scorecardDraft {
+  composes: scorecardBadge;
+  background: var(--gh-autofill-bg);
+  color: var(--gh-autofill-text);
+}
+
+.scorecardSubmitted {
+  composes: scorecardBadge;
+  background: var(--gh-accent-light);
+  color: var(--gh-accent);
+}
+
+/* Granola badge on interview row */
+.granolaBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #faf5eb;
+  font-size: 11px;
+  font-weight: 500;
+  color: #8a7a50;
+  flex-shrink: 0;
+}
+
+.granolaBadgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c4a84a;
+}

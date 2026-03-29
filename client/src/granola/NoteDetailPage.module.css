@@ -1,0 +1,307 @@
+/* Granola Note Detail Page */
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 24px 100px;
+  width: 100%;
+}
+
+/* Top bar */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--granola-text-secondary);
+  transition: background var(--transition);
+}
+
+.backButton:hover {
+  background: var(--granola-hover);
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.enhancedBadge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  color: var(--granola-text-secondary);
+  cursor: default;
+}
+
+.enhancedIcon {
+  font-size: 13px;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--granola-text);
+  color: white;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+
+.shareButton:hover {
+  opacity: 0.85;
+}
+
+.moreButton {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--granola-text-secondary);
+  font-size: 16px;
+  transition: background var(--transition);
+}
+
+.moreButton:hover {
+  background: var(--granola-hover);
+}
+
+/* Share dropdown */
+.shareDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.shareMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  background: var(--granola-card-bg);
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 220px;
+  padding: 6px;
+  z-index: 100;
+}
+
+.shareMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--granola-text);
+  cursor: pointer;
+  transition: background var(--transition);
+  width: 100%;
+  text-align: left;
+}
+
+.shareMenuItem:hover {
+  background: var(--granola-hover);
+}
+
+.shareMenuIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--granola-text-secondary);
+}
+
+.shareMenuItemDisabled {
+  composes: shareMenuItem;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.shareMenuItemDisabled:hover {
+  background: transparent;
+}
+
+/* Sent confirmation */
+.sentBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--granola-accent-light);
+  color: var(--granola-accent);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+/* Note title */
+.title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--granola-text);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+/* Metadata chips */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.metaChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  color: var(--granola-text-secondary);
+  background: var(--granola-card-bg);
+}
+
+.metaChipIcon {
+  font-size: 12px;
+  color: var(--granola-text-tertiary);
+}
+
+/* Note content (rendered markdown) */
+.content {
+  line-height: 1.65;
+  color: var(--granola-text);
+}
+
+.content h2,
+.content h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--granola-text-secondary);
+  margin: 28px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.content h2::before,
+.content h3::before {
+  content: '#';
+  color: var(--granola-text-tertiary);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.content ul {
+  padding-left: 20px;
+  margin: 4px 0 8px;
+}
+
+.content li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.content ul ul {
+  margin: 2px 0;
+}
+
+.content ul ul li {
+  font-size: 13.5px;
+  color: var(--granola-text-secondary);
+}
+
+.content ul ul li::marker {
+  color: var(--granola-text-tertiary);
+}
+
+.content p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.content strong {
+  font-weight: 600;
+}
+
+/* Bottom chat bar */
+.chatBar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(calc(-50% + 110px));
+  width: min(520px, calc(100% - 280px));
+  background: var(--granola-card-bg);
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.chatBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chatBarToggle {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--granola-text-tertiary);
+  font-size: 14px;
+  border: 1px solid var(--granola-border);
+}
+
+.chatBarPlaceholder {
+  font-size: 13.5px;
+  color: var(--granola-text-tertiary);
+}
+
+.chatBarRecipe {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--granola-bg-secondary);
+  font-size: 12.5px;
+  color: var(--granola-text-secondary);
+  font-weight: 450;
+  cursor: default;
+}
+
+.chatBarRecipeIcon {
+  color: var(--granola-accent);
+  font-size: 11px;
+}

@@ -1,0 +1,452 @@
+/* Greenhouse Interview Kit — Scorecard page */
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+}
+
+/* Top header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.headerLabel {
+  font-size: 12px;
+  color: var(--gh-text-tertiary);
+  font-weight: 500;
+}
+
+.closeButton {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gh-text-secondary);
+  font-size: 18px;
+  transition: background var(--transition);
+}
+
+.closeButton:hover {
+  background: var(--gh-hover);
+}
+
+/* Job + stage info */
+.jobTitle {
+  font-size: 13px;
+  color: var(--gh-text-secondary);
+  margin-bottom: 4px;
+}
+
+.stageTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gh-text);
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--gh-border);
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 10px 18px;
+  font-size: 13.5px;
+  font-weight: 450;
+  color: var(--gh-text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition);
+}
+
+.tab:hover {
+  color: var(--gh-text);
+}
+
+.tabActive {
+  composes: tab;
+  color: var(--gh-text);
+  font-weight: 550;
+  border-bottom-color: var(--gh-accent);
+}
+
+/* Granola Autofill Banner — like BrightHire's */
+.autofillBanner {
+  border: 2px solid var(--gh-autofill-border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  background: var(--gh-autofill-bg);
+}
+
+.autofillHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.autofillTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gh-autofill-text);
+}
+
+.autofillIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  box-shadow: var(--shadow-sm);
+}
+
+.autofillLearnMore {
+  font-size: 12.5px;
+  color: var(--gh-autofill-text);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.autofillOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.autofillOptionsLabel {
+  font-size: 13px;
+  color: var(--gh-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.autofillToggle {
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--gh-autofill-border);
+  position: relative;
+  cursor: default;
+}
+
+.autofillToggleDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.autofillButton {
+  padding: 8px 18px;
+  background: var(--gh-autofill-border);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity var(--transition);
+}
+
+.autofillButton:hover {
+  opacity: 0.9;
+}
+
+.autofillButtonIcon {
+  font-size: 14px;
+}
+
+/* Note match info */
+.autofillMatch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: white;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gh-border);
+}
+
+.autofillMatchIcon {
+  font-size: 18px;
+  color: var(--gh-text-secondary);
+}
+
+.autofillMatchText {
+  flex: 1;
+}
+
+.autofillMatchTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gh-text);
+}
+
+.autofillMatchSub {
+  font-size: 12px;
+  color: var(--gh-text-tertiary);
+}
+
+/* Autofill done state */
+.autofillDone {
+  composes: autofillBanner;
+  border-color: var(--gh-accent);
+  background: var(--gh-accent-light);
+}
+
+.autofillDoneText {
+  font-size: 13.5px;
+  color: var(--gh-accent-dark);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Bias reminder */
+.biasReminder {
+  border: 1px solid var(--gh-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.biasIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 2px;
+}
+
+.biasIcon {
+  font-size: 14px;
+}
+
+.biasText {
+  font-size: 13.5px;
+  color: var(--gh-text);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.biasSub {
+  font-size: 13px;
+  color: var(--gh-text-secondary);
+  font-weight: 400;
+}
+
+/* Scorecard form */
+.scorecardCard {
+  border: 1px solid var(--gh-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 16px;
+  background: var(--gh-card-bg);
+}
+
+.scorecardSection {
+  margin-bottom: 24px;
+}
+
+.scorecardSection:last-child {
+  margin-bottom: 0;
+}
+
+.scorecardLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gh-text);
+  margin-bottom: 8px;
+}
+
+.scorecardSublabel {
+  font-size: 12.5px;
+  color: var(--gh-text-tertiary);
+  margin-bottom: 10px;
+}
+
+.clearFieldsButton {
+  float: right;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--gh-bg-secondary);
+  font-size: 12px;
+  color: var(--gh-text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.clearFieldsButton:hover {
+  background: var(--gh-hover);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 14px;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--gh-text);
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color var(--transition);
+  background: white;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--gh-accent);
+}
+
+.textareaHighlighted {
+  composes: textarea;
+  background: var(--gh-highlight);
+  border-color: #e0d48a;
+}
+
+/* Overall recommendation */
+.recommendationGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.recommendationOption {
+  padding: 8px 18px;
+  border: 1.5px solid var(--gh-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 475;
+  color: var(--gh-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.recommendationOption:hover {
+  border-color: var(--gh-scorecard-border);
+  background: var(--gh-hover);
+}
+
+.recommendationSelected {
+  composes: recommendationOption;
+}
+
+.recommendationStrongYes {
+  composes: recommendationSelected;
+  border-color: #2d8a4e;
+  background: #e6f4ec;
+  color: #1b6e3a;
+}
+
+.recommendationYes {
+  composes: recommendationSelected;
+  border-color: #5aaa6e;
+  background: #edf7f1;
+  color: #2d7a4a;
+}
+
+.recommendationNo {
+  composes: recommendationSelected;
+  border-color: #d48a3a;
+  background: #fef5ea;
+  color: #9a6520;
+}
+
+.recommendationDefinitelyNot {
+  composes: recommendationSelected;
+  border-color: #d45050;
+  background: #fef0f0;
+  color: #a83030;
+}
+
+/* Submit */
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.submitButton {
+  padding: 10px 24px;
+  background: var(--gh-accent);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 550;
+  transition: background var(--transition);
+}
+
+.submitButton:hover {
+  background: var(--gh-accent-dark);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.saveDraftButton {
+  padding: 10px 24px;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 475;
+  color: var(--gh-text-secondary);
+  transition: background var(--transition);
+}
+
+.saveDraftButton:hover {
+  background: var(--gh-hover);
+}
+
+/* Success state */
+.submittedCard {
+  border: 1px solid var(--gh-accent);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  background: var(--gh-accent-light);
+  text-align: center;
+}
+
+.submittedTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gh-accent-dark);
+  margin-bottom: 4px;
+}
+
+.submittedSub {
+  font-size: 13.5px;
+  color: var(--gh-text-secondary);
+}

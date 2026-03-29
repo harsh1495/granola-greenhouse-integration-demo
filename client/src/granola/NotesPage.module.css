@@ -1,0 +1,208 @@
+/* Granola My Notes Page */
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  width: 100%;
+}
+
+.lockIcon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: var(--granola-text-tertiary);
+}
+
+.heading {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--granola-text);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: var(--granola-text-tertiary);
+  margin-bottom: 28px;
+}
+
+/* Chat bar area */
+.chatArea {
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  background: var(--granola-card-bg);
+}
+
+.chatScope {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--granola-text-secondary);
+  margin-bottom: 8px;
+}
+
+.chatScopeLock {
+  font-size: 11px;
+}
+
+.chatInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatPlaceholder {
+  font-size: 13.5px;
+  color: var(--granola-text-tertiary);
+}
+
+.chatRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatModel {
+  font-size: 12px;
+  color: var(--granola-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chatIcons {
+  display: flex;
+  gap: 6px;
+}
+
+.chatIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--granola-text-tertiary);
+  font-size: 14px;
+}
+
+/* Recipe suggestions */
+.recipes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0 20px;
+}
+
+.recipePill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  color: var(--granola-text-secondary);
+  cursor: default;
+}
+
+.recipePillIcon {
+  font-size: 11px;
+  color: var(--granola-accent);
+}
+
+.allRecipes {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--granola-text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+}
+
+.divider {
+  height: 1px;
+  background: var(--granola-border);
+  margin-bottom: 8px;
+}
+
+/* Reuse note rows from HomePage */
+.dateLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--granola-text-secondary);
+  padding: 12px 0 6px;
+}
+
+.noteRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.noteRow:hover {
+  background: var(--granola-hover);
+}
+
+.noteIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--granola-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--granola-note-icon);
+  font-size: 16px;
+}
+
+.noteInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.noteTitle {
+  font-size: 13.5px;
+  font-weight: 475;
+  color: var(--granola-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.noteSubtitle {
+  font-size: 12.5px;
+  color: var(--granola-text-tertiary);
+}
+
+.noteRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.noteLock {
+  font-size: 12px;
+  color: var(--granola-lock-icon);
+}
+
+.noteTime {
+  font-size: 12px;
+  color: var(--granola-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}

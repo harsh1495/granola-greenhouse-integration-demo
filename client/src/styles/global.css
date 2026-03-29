@@ -1,0 +1,95 @@
+/* =====================
+   GLOBAL RESET & VARIABLES
+   ===================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Granola palette — warm, cream, organic */
+  --granola-bg: #faf8f4;
+  --granola-bg-secondary: #f3f0ea;
+  --granola-sidebar-bg: #f3f0ea;
+  --granola-text: #1a1a1a;
+  --granola-text-secondary: #7a7568;
+  --granola-text-tertiary: #a8a08f;
+  --granola-border: #e8e4dc;
+  --granola-accent: #4a9e6e;
+  --granola-accent-light: #e8f5ee;
+  --granola-hover: #e2ddd5;
+  --granola-card-bg: #ffffff;
+  --granola-note-icon: #d4cfc5;
+  --granola-lock-icon: #c4bfb4;
+  --granola-sent-badge: #4a9e6e;
+
+  /* Greenhouse palette — clean, professional, green */
+  --gh-bg: #ffffff;
+  --gh-bg-secondary: #f8faf8;
+  --gh-text: #1a1e1c;
+  --gh-text-secondary: #6b7770;
+  --gh-text-tertiary: #9ca89f;
+  --gh-border: #dce3de;
+  --gh-accent: #1b8a4a;
+  --gh-accent-light: #e6f4ec;
+  --gh-accent-dark: #15703c;
+  --gh-nav-bg: #ffffff;
+  --gh-hover: #f0f5f2;
+  --gh-card-bg: #ffffff;
+  --gh-scorecard-border: #c5d1c9;
+  --gh-autofill-bg: #f0edff;
+  --gh-autofill-border: #7c6fe0;
+  --gh-autofill-text: #5a4fcf;
+  --gh-warning-bg: #fef9e7;
+  --gh-warning-border: #f0e4a6;
+  --gh-highlight: #fef9e7;
+
+  /* Shared */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --transition: 150ms ease;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--granola-text);
+  background: var(--granola-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Serif headings — matches Granola's editorial feel */
+.serif {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+}

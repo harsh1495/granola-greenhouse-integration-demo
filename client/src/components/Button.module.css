@@ -1,0 +1,24 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--granola-border);
+  background: var(--granola-card-bg);
+  color: var(--granola-text);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.button:hover {
+  background: var(--granola-bg-secondary);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}

@@ -1,0 +1,259 @@
+/* Granola Settings Page */
+
+.layout {
+  display: flex;
+  height: 100%;
+}
+
+/* Settings sidebar */
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  border-right: 1px solid var(--granola-border);
+  padding: 20px 12px;
+  overflow-y: auto;
+  background: var(--granola-bg);
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0 20px;
+  border-bottom: 1px solid var(--granola-border);
+  margin-bottom: 8px;
+}
+
+.profileAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--granola-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--granola-text);
+  margin-bottom: 2px;
+}
+
+.profileEmail {
+  font-size: 12px;
+  color: var(--granola-text-tertiary);
+  margin-bottom: 10px;
+}
+
+.editProfileBtn {
+  padding: 4px 14px;
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--granola-text-secondary);
+  cursor: default;
+}
+
+/* Settings nav items */
+.settingsNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--granola-text-secondary);
+  cursor: default;
+  transition: background var(--transition);
+}
+
+.navItemClickable {
+  composes: navItem;
+  cursor: pointer;
+}
+
+.navItemClickable:hover {
+  background: var(--granola-hover);
+}
+
+.navItemActive {
+  composes: navItem;
+  background: var(--granola-hover);
+  color: var(--granola-text);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navIcon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sectionLabel {
+  padding: 16px 12px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--granola-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signOut {
+  margin-top: 12px;
+  padding: 7px 12px;
+  font-size: 13px;
+  color: #d45050;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+}
+
+/* Main content area */
+.main {
+  flex: 1;
+  padding: 40px 48px;
+  overflow-y: auto;
+  background: var(--granola-bg);
+}
+
+.settingsHeader {
+  font-size: 12px;
+  color: var(--granola-text-tertiary);
+  margin-bottom: 24px;
+}
+
+/* Integration panel — like Notion setup page */
+.integrationHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.integrationLogo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.integrationLogoGreenhouse {
+  composes: integrationLogo;
+  background: #e6f4ec;
+  color: var(--gh-accent);
+}
+
+.integrationTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--granola-text);
+}
+
+.integrationSubtitle {
+  font-size: 14px;
+  color: var(--granola-text-secondary);
+  margin-bottom: 24px;
+}
+
+.connectButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--granola-text);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity var(--transition);
+  margin-bottom: 8px;
+}
+
+.connectButton:hover {
+  opacity: 0.85;
+}
+
+.connectedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--granola-accent-light);
+  color: var(--granola-accent);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.disconnectButton {
+  display: inline-flex;
+  padding: 6px 14px;
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  color: var(--granola-text-secondary);
+  margin-left: 12px;
+  transition: background var(--transition);
+}
+
+.disconnectButton:hover {
+  background: var(--granola-hover);
+}
+
+/* How it works section */
+.howItWorks {
+  margin-top: 32px;
+}
+
+.howItWorksTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--granola-text);
+  margin-bottom: 4px;
+}
+
+.howItWorksSubtitle {
+  font-size: 13.5px;
+  color: var(--granola-text-secondary);
+  margin-bottom: 16px;
+}
+
+.steps {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step {
+  font-size: 14px;
+  color: var(--granola-text);
+  line-height: 1.5;
+}
+
+.stepBold {
+  font-weight: 600;
+}

@@ -1,0 +1,240 @@
+/* Granola Home Page — "Coming up" + past notes */
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  width: 100%;
+}
+
+.heading {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--granola-text);
+  margin-bottom: 20px;
+}
+
+/* Calendar card */
+.calendarCard {
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 36px;
+  display: flex;
+  gap: 20px;
+  background: var(--granola-card-bg);
+}
+
+.calendarDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+}
+
+.calendarDay {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--granola-text);
+  line-height: 1;
+}
+
+.calendarMonth {
+  font-size: 12px;
+  color: var(--granola-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.calendarDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e05252;
+}
+
+.calendarDayName {
+  font-size: 11px;
+  color: var(--granola-text-tertiary);
+}
+
+.calendarDivider {
+  width: 1px;
+  background: var(--granola-border);
+  border-style: dashed;
+}
+
+.calendarEmpty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 0;
+}
+
+.calendarEmptyIcon {
+  font-size: 20px;
+  color: var(--granola-text-tertiary);
+}
+
+.calendarEmptyText {
+  font-size: 13px;
+  color: var(--granola-text-secondary);
+}
+
+.calendarSettingsLink {
+  font-size: 12.5px;
+  color: var(--granola-text);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 12px;
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+
+.calendarSettingsLink:hover {
+  background: var(--granola-hover);
+}
+
+/* Notes list */
+.dateGroup {
+  margin-bottom: 8px;
+}
+
+.dateLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--granola-text-secondary);
+  padding: 12px 0 6px;
+}
+
+.noteRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.noteRow:hover {
+  background: var(--granola-hover);
+}
+
+.noteIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--granola-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.noteIconDoc {
+  composes: noteIcon;
+  color: var(--granola-note-icon);
+  font-size: 16px;
+}
+
+.noteIconAvatar {
+  composes: noteIcon;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--granola-text-secondary);
+  background: var(--granola-bg-secondary);
+}
+
+.noteInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.noteTitle {
+  font-size: 13.5px;
+  font-weight: 475;
+  color: var(--granola-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.noteSentBadge {
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--granola-sent-badge);
+}
+
+.noteSubtitle {
+  font-size: 12.5px;
+  color: var(--granola-text-tertiary);
+}
+
+.noteRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.noteLock {
+  font-size: 12px;
+  color: var(--granola-lock-icon);
+}
+
+.noteTime {
+  font-size: 12px;
+  color: var(--granola-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Chat bar (decorative) */
+.chatBar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(calc(-50% + 110px));
+  width: min(520px, calc(100% - 280px));
+  background: var(--granola-card-bg);
+  border: 1px solid var(--granola-border);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.chatBarPlaceholder {
+  font-size: 13.5px;
+  color: var(--granola-text-tertiary);
+}
+
+.chatBarRecipe {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--granola-bg-secondary);
+  font-size: 12.5px;
+  color: var(--granola-text-secondary);
+  font-weight: 450;
+  cursor: default;
+}
+
+.chatBarRecipeIcon {
+  color: var(--granola-accent);
+  font-size: 11px;
+}
