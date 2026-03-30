@@ -57,6 +57,7 @@ export default function NoteDetailPage() {
 
   const isConnected = integration?.status === 'connected'
   const isSent = note?.sent_to_greenhouse ?? false
+  const isInterview = note?.title?.toLowerCase().includes('interview')
 
   const candidateEmail = note?.attendees
     ?.find((a) => a.email !== note.owner?.email)
@@ -103,7 +104,7 @@ export default function NoteDetailPage() {
             Enhanced
           </span>
 
-          {isSent ? (
+          {isInterview && (isSent ? (
             <span className={styles.sentBadge}>✓ Sent to Greenhouse</span>
           ) : (
             <div className={styles.shareDropdown}>
@@ -128,7 +129,7 @@ export default function NoteDetailPage() {
                 </div>
               )}
             </div>
-          )}
+          ))}
         </div>
       </div>
 
