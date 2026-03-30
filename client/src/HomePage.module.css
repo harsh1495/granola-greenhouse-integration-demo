@@ -20,6 +20,10 @@
   margin-bottom: 12px;
 }
 
+.subheading a:hover {
+  color: rgb(178, 193, 71);
+}
+
 .buttons {
   display: flex;
   gap: 12px;

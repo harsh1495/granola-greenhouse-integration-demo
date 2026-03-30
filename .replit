@@ -1,0 +1,24 @@
+modules = ["python-3.10", "nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+mode = "parallel"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd server && pip install -r requirements.txt -q && uvicorn main:app --host 0.0.0.0 --port 8000"
+waitForPort = 8000
+
+[deployment]
+run = ["sh", "-c", "cd client && npm install && npm run build && cd ../server && uvicorn main:app --host 0.0.0.0 --port 8000"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8000
+externalPort = 80

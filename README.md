@@ -20,9 +20,8 @@ Granola already does bot-free transcription and AI notes for $14/month. This pro
 
 ## Tech Stack
 
-- **Frontend:** React (Vite) + CSS Modules
+- **Frontend:** React + TypeScript (Vite) + CSS Modules
 - **Backend:** Python FastAPI + SQLite
-- **Deployment:** Replit (single port)
 
 ## Setup
 
@@ -44,8 +43,7 @@ The Vite dev server proxies `/api` requests to the FastAPI server.
 
 ### Replit
 
-The `.replit` file is configured to run the FastAPI server.
-Build the frontend first: `cd client && npm run build`
+Open the repo in Replit — the `.replit` file is configured to build the frontend and start the FastAPI server on port 8000.
 
 ### Production Build
 
@@ -63,6 +61,7 @@ cd ../server && uvicorn main:app --host 0.0.0.0 --port 8000
 │   ├── main.py                  # FastAPI routes
 │   ├── models.py                # Pydantic models
 │   ├── database.py              # SQLite schema + queries
+│   ├── query.py                 # SQL query helpers
 │   └── requirements.txt
 ├── client/
 │   ├── src/
@@ -70,7 +69,7 @@ cd ../server && uvicorn main:app --host 0.0.0.0 --port 8000
 │   │   ├── greenhouse/          # Greenhouse clone (3 pages)
 │   │   ├── components/          # Shared (OAuth page)
 │   │   └── styles/              # Global CSS
-│   └── vite.config.js
+│   └── vite.config.ts
 └── .replit
 ```
 
